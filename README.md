@@ -1,8 +1,9 @@
 # triangleMinPath-
 
 //To run
+
 sbt "runMain MinTrianglePath triangle.txt"
 
-run tests
+//run tests
 
 sbt test

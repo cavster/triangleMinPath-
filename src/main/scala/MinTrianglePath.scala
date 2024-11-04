@@ -1,4 +1,3 @@
-import MinTrianglePath.minimumPath
 
 case class TriangleNode(value: Int, path: List[Int])
 
