@@ -1,2 +1,9 @@
 
 //All data comes in correctly as triangle I did not add in error handling for that
+ so data comes in like
+
+ 7
+ 6 3
+ 5 6 7
+
+ If it doesnt come in in the correct format you will get an error

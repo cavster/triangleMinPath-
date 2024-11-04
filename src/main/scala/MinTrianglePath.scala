@@ -1,3 +1,4 @@
+import MinTrianglePath.minimumPath
 
 case class TriangleNode(value: Int, path: List[Int])
 
@@ -28,4 +29,26 @@ object MinTrianglePath {
   val answerWithPathFromTop =  (answer._1,  answer._2.reverse)
     answerWithPathFromTop
   }
+
+  import scala.io.Source
+
+  def main(args: Array[String]): Unit = {
+    if (args.isEmpty) {
+      println("Please provide a filename as an argument.")
+      return
+    }
+
+    val triangle = Source.fromFile(args(0)).getLines().toList.map { line =>
+      line.split(" ").map(_.toInt).toList
+    }
+
+    if (triangle.nonEmpty) {
+      val (minPathSum, path) = minimumPath(triangle)
+      println(s"Minimal path is: ${path.mkString(" + ")} = $minPathSum")
+    } else {
+      println("No triangle data was entered.")
+    }
+  }
+
+
 }

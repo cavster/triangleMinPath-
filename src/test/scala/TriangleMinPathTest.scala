@@ -14,7 +14,7 @@ class MinTrianglePathTest extends AnyFlatSpec with Matchers {
   }
 
   "The minimumPath function" should "calculate the correct minimal path for the triangle in data_small.txt" in {
-    val triangle = readTriangleFromFile("src/test/data_small.txt")
+    val triangle = readTriangleFromFile("data_small.txt")
 
     val (minPathSum, path) = MinTrianglePath.minimumPath(triangle)
 
@@ -22,7 +22,7 @@ class MinTrianglePathTest extends AnyFlatSpec with Matchers {
     path shouldEqual  List.fill(50)(1)}
 
   "The minimumPath function" should "calculate the correct minimal path for a big triangle in data_big.txt" in {
-    val triangle = readTriangleFromFile("src/test/data_big.txt")
+    val triangle = readTriangleFromFile("data_big.txt")
 
     val (minPathSum, path) = MinTrianglePath.minimumPath(triangle)
 
